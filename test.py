@@ -27,7 +27,7 @@ def input_pdf_setup(uploaded_file):
 st.set_page_config(page_title="ATS Resume Expert")
 
 st.header("ATS Tracking System")
-st.subheader("This Application helps you in your Resume Review with help of GEMINI AI [LLM]")
+st.subheader("Paste Your Job Description & Upload Your resume")
 input_text = st.text_area("Job Description: ")
 uploaded_file = st.file_uploader("Upload your Resume (PDF)...", type=["pdf"])
 
