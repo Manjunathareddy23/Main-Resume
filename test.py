@@ -27,7 +27,7 @@ def input_pdf_setup(uploaded_file):
 st.set_page_config(page_title="ATS Resume Expert")
 
 st.header("ATS Tracking System")
-st.subheader("Paste Your Job Description & Upload Your resume")
+st.subheader("Paste Your Job Description & Upload Your Resume")
 input_text = st.text_area("Job Description: ")
 uploaded_file = st.file_uploader("Upload your Resume (PDF)...", type=["pdf"])
 
@@ -37,9 +37,13 @@ if uploaded_file is not None:
     
     # Button to get ATS Score
     if st.button("Get ATS Score"):
-        response = get_gemini_response("Evaluate ATS match percentage.", pdf_content, input_text)
-        st.subheader("ATS Score")
-        st.write(response)
+        response = get_gemini_response("Provide an exact ATS match percentage (only the percentage).", pdf_content, input_text)
+        try:
+            score = float(response.strip().replace("%", ""))
+            st.subheader("ATS Score")
+            st.write(f"{score:.2f}%")
+        except ValueError:
+            st.write("Error: Unable to retrieve an exact percentage.")
     
     # Button to check reasons for low score
     if st.button("Why is my score low?"):
