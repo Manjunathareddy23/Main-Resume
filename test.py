@@ -134,7 +134,7 @@ elif submit5:
 
 footer = """
 ---
-#### Made By [Shifa Zahra](https://www.linkedin.com/in/shifa-zahra/) 
+#### Developed By [Manjunathareddy]
 *Resume Expert - Making Job Applications Easier*
 """
 
