@@ -72,6 +72,6 @@ if uploaded_file is not None:
 footer = """
 ---
 #### Developed By [Manjunathareddy]
-*Resume Expert - Making Job Applications Easier*
+*Let's Connect-6300138360*
 """
 st.markdown(footer, unsafe_allow_html=True)
