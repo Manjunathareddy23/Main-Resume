@@ -1,5 +1,5 @@
 streamlit
-google-generative
+
 python-dotenv
 PyMuPDF
 pdf2image
